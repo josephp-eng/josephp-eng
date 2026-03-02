@@ -8,10 +8,10 @@ This repository serves as a portfolio of my work as a Robotics Engineering stude
 
 ## Skills
 
-* **Programming Languages:** C/C++, Java, Python, MATLAB
+* **Programming Languages:** C/C++, Java, Python, MATLAB, Ladder Logic
 * **Design:** Fusion 360, KiCad
 * **Soldering & Electronics:** Proficient in soldering techniques
-* **Other:** 3D Printing, electromechanical development
+* **Other:** 3D Printing, MS Office
 
 ---
 
