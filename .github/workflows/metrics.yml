@@ -27,6 +27,8 @@ jobs:
           plugin_languages_ignored: html, css, jupyter notebook, openscad
           plugin_languages_details: percentage, lines
           config_timezone: America/Detroit
+          # Temporary: prints per-repo analysis details to the run log
+          debug: yes
           # Count repos you own, collaborate on, or belong to via an organization
           repositories_affiliations: owner, collaborator, organization_member
           # Include forks (senior design work lives in forks); with indepth mode,
