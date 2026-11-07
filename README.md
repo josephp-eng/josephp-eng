@@ -20,7 +20,7 @@ I'm a Robotics Engineering student at **Michigan Technological University** (B.S
 
 | Area | Tools & Technologies |
 | --- | --- |
-| **Mechanical Design & Prototyping** | SolidWorks, Fusion 360, Siemens NX, 3D Printing (FDM & Delta), Kinematics, Pneumatics |
+| **Mechanical Design & Prototyping** | SolidWorks, Fusion 360, Siemens NX, OpenSCAD, 3D Printing (FDM & Delta), Kinematics, Pneumatics |
 | **Embedded & Controls** | C (bare-metal STM32), PWM / Interrupts / Timers, I2C, PID Tuning, MATLAB/Simulink |
 | **Industrial Automation** | Studio 5000 / RSLogix 5000, Siemens PLCs, Ladder Logic, C-more HMI, FANUC Robot Integration, AutoCAD Electrical |
 | **Robotics & Software** | Python, C++, Java, ROS 2, Linux, OpenCV / Computer Vision, LiDAR, R, SQL |
