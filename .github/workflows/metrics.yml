@@ -34,6 +34,10 @@ jobs:
           repositories_forks: yes
           # Analyze only the code in your own commits, not each repo's whole codebase
           plugin_languages_indepth: yes
-          plugin_languages_analysis_timeout: 30
+          # Big CAD/driver histories (OSHE-PnP, parking assistant) need more time per repo
+          plugin_languages_analysis_timeout: 60
+          plugin_languages_analysis_timeout_repositories: 15
+          # Upstream copy of my own OSHE-PnP fork; skip it so commits aren't analyzed twice
+          plugin_languages_skipped: MatthewCompher/OSHE-PnP
           # Add other emails/usernames you've committed with, comma-separated
-          commits_authoring: josephp-eng, jrpokuta@gmail.com
+          commits_authoring: josephp-eng, jrpokuta@gmail.com, jrpokuta@mtu.edu
