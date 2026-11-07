@@ -2,7 +2,7 @@ name: Language Metrics
 
 on:
   schedule:
-    - cron: "0 6 * * *"   # once a day
+    - cron: "0 6 * * 1"   # once a week, Mondays at 06:00 UTC
   workflow_dispatch:       # lets you run it manually from the Actions tab
   push:
     branches: [main]
@@ -27,10 +27,8 @@ jobs:
           plugin_languages_ignored: html, css, jupyter notebook, openscad
           plugin_languages_details: percentage, lines
           config_timezone: America/Detroit
-          # Temporary: prints per-repo analysis details to the run log
-          debug: yes
-          # Count repos you own, collaborate on, or belong to via an organization
-          repositories_affiliations: owner, collaborator, organization_member
+          # Only repos I own (includes my OSHE-PnP fork); skips the OSHE-Github organization
+          repositories_affiliations: owner
           # Include forks (senior design work lives in forks); with indepth mode,
           # only your own commits in them are counted
           repositories_forks: yes
@@ -39,7 +37,9 @@ jobs:
           # Big CAD/driver histories (OSHE-PnP, parking assistant) need more time per repo
           plugin_languages_analysis_timeout: 60
           plugin_languages_analysis_timeout_repositories: 15
-          # Upstream copy of my own OSHE-PnP fork; skip it so commits aren't analyzed twice
-          plugin_languages_skipped: MatthewCompher/OSHE-PnP
+          # The OSHE-PnP copies share the same commit history as josephp-eng/OSHE-PnP; skip them
+          # so senior design commits are only counted once. Ultrasonic-Parking-Assistant is mostly
+          # STM32CubeIDE-generated code. (Private repos are never read by this action.)
+          plugin_languages_skipped: MatthewCompher/OSHE-PnP, OSHE-Github/OSHE-PnP, OSHE-Github/OSHE-Modular-Gantry-Toolhead-Platform, josephp-eng/Ultrasonic-Parking-Assistant
           # Add other emails/usernames you've committed with, comma-separated
           commits_authoring: josephp-eng, jrpokuta@gmail.com, jrpokuta@mtu.edu
